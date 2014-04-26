@@ -7,7 +7,7 @@ import sys
 def genrateRandomDataTill(limit):
 	
 	fileName = datetime.now().strftime("%d_%m_%y_%I%M%S") + ".txt"
-	# Setting range to twice the numbers needed
+	# Setting range of numbers to a high value by multiplying with some constant
 	data =  sample(xrange(limit * 8), limit)
 	file = open(fileName,"w")
 
