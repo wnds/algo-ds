@@ -1,10 +1,10 @@
 import unittest
-from insertionSort import insertionSort
+from InsertionSort import InsertionSort
 from generateInput import SeedData
 import os.path
 import sys
 
-class insertionSortTest(unittest.TestCase):
+class InsertionSortTest(unittest.TestCase):
 
     def setUp(self):
         sd = SeedData()
@@ -16,7 +16,7 @@ class insertionSortTest(unittest.TestCase):
 
     def testInsertionSortWith10Numbers(self):
     	sys.argv = ["", self.fileName]
-    	inst = insertionSort.insertionSort()
+    	inst = InsertionSort.InsertionSort()
     	inst.setUpSort()
 
     def tearDown(self):

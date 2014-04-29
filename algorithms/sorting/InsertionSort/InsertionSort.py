@@ -5,7 +5,7 @@ from datetime import datetime
 import sys
 from baseSort import baseSort
 
-class insertionSort(baseSort):
+class InsertionSort(baseSort):
 	
 	'''
 	The invariant for Insertion Sort is following
@@ -35,5 +35,5 @@ class insertionSort(baseSort):
 MAIN FUNCTION
 '''
 if __name__ == '__main__':
-	c = insertionSort()
+	c = InsertionSort()
 	c.setUpSort()
