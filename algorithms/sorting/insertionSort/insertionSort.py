@@ -34,6 +34,6 @@ class insertionSort(baseSort):
 '''
 MAIN FUNCTION
 '''
-
-c = insertionSort()
-c.setUpSort()
+if __name__ == '__main__':
+	c = insertionSort()
+	c.setUpSort()

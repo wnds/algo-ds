@@ -4,34 +4,40 @@ from datetime import datetime
 from random import sample
 import sys
 
-def genrateRandomDataTill(limit):
-	
-	fileName = datetime.now().strftime("%d_%m_%y_%I%M%S") + ".txt"
-	# Setting range of numbers to a high value by multiplying with some constant
-	data =  sample(xrange(limit * 8), limit)
-	file = open(fileName,"w")
+class SeedData():
 
-	for idx, val in enumerate(data):
-		if idx != 0:
-			file.write("\n")
-		file.write(str(val))
-	file.close()
+	def genrateRandomDataTill(self, limit):
+		
+		fileName = datetime.now().strftime("%d_%m_%y_%I%M%S") + ".txt"
+		# Setting range of numbers to a high value by multiplying with some constant
+		data =  sample(xrange(limit * 8), limit)
+		file = open(fileName,"w")
 
-	print "Generated file with name [%s]" % fileName
+		for idx, val in enumerate(data):
+			if idx != 0:
+				file.write("\n")
+			file.write(str(val))
+		file.close()
 
+		print "Generated file with name [%s]" % fileName
 
-print "This program will generate a input file to be used for sorting."
-print "Press 1 for random numbers."
+		return fileName
 
-try:
-	option = int(raw_input('> '))
-except Exception, e:
-	print "This option is invalid"
-	sys.exit(0)
+if __name__ == '__main__':
 
-if option == 1:
-	print "OK. Random data will be generated. Tell me how many you want? "
-	limit = raw_input('> ')
-	genrateRandomDataTill(int(limit))
-else:
-	print "This option is invalid"
+	print "This program will generate a input file to be used for sorting."
+
+	if len(sys.argv) == 2:
+		script, limit = sys.argv
+		print "Got argument as %d " % int(limit)
+	else:
+		print "Random data will be generated. Tell me how many you want ?"
+
+		try:
+			limit = int(raw_input('> '))
+		except Exception, e:
+			print "The number entered is invalid"
+			sys.exit(0)
+
+	i = SeedData()
+	i.genrateRandomDataTill(int(limit))
