@@ -4,7 +4,7 @@ from datetime import datetime
 from random import sample
 import sys
 
-class SeedData():
+class seeddata():
 
 	def genrateRandomDataTill(self, limit):
 		
@@ -39,5 +39,5 @@ if __name__ == '__main__':
 			print "The number entered is invalid"
 			sys.exit(0)
 
-	i = SeedData()
+	i = seeddata()
 	i.genrateRandomDataTill(int(limit))

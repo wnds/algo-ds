@@ -2,7 +2,7 @@ from datetime import datetime
 import sys
 import abc
 
-class baseSort:
+class basesort:
 
 	__metaclass__ = abc.ABCMeta
 
