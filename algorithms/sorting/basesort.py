@@ -26,7 +26,7 @@ class basesort:
 			sys.exit(0)
 
 		startTime = datetime.now()
-		print "Performing Insertion Sort: Start at %s" % startTime
+		print "Performing Sort: Start at %s" % startTime
 
 		fileData = file.readlines()
 
@@ -38,7 +38,7 @@ class basesort:
 		print sortedData
 
 		endTime = datetime.now()
-		print "Performed Insertion Sort: End at %s" % endTime
+		print "Performed Sort: End at %s" % endTime
 
 		print "Time elapsed " + str(endTime - startTime)
 		return sortedData
