@@ -41,3 +41,4 @@ class basesort:
 		print "Performed Insertion Sort: End at %s" % endTime
 
 		print "Time elapsed " + str(endTime - startTime)
+		return sortedData
